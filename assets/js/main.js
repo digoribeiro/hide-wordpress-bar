@@ -17,13 +17,13 @@ jQuery(document).ready(function ($) {
       }
     })
     var hiddenElement = $('#wpadminbar, .wp-toolbar, html')
-    var isHiddenElement = localStorage.getItem('hide_bar__plugin').toString()
+    var isHiddenElement = localStorage.getItem('hide_bar__plugin')
     var showText = $('.text-show__plugin')
     var hideText = $('.text-hide__plugin')
 
     $(btnPlugin).on('click', function () {
       isHiddenElement = isHiddenElement ? false : true
-      localStorage.setItem('hide_bar__plugin', isHiddenElement.toString())
+      localStorage.setItem('hide_bar__plugin', isHiddenElement)
       isHidden()
     })
     function isHidden() {
